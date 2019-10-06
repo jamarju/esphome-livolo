@@ -20,6 +20,8 @@ esphome livolo.yaml wizard
 
 ## Compile
 
+The export is important before any other compile relate command, otherwise the compiler fails with internal error.
+
 ```
 export LC_ALL=C
 esphome livolo.yaml compile
