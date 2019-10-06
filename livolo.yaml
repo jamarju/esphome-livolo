@@ -1,0 +1,30 @@
+esphome:
+  name: livolo
+  platform: ESP8266
+  board: nodemcuv2
+  includes:
+    - livolo_switch.h
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+# Custom Livolo switch (2-gang)
+switch:
+  - platform: custom
+    lambda: |-
+      auto livoloSwitch = new LivoloSwitch();
+      App.register_component(livoloSwitch);
+      return { livoloSwitch->livoloGang[0], livoloSwitch->livoloGang[1] };
+
+    switches:
+      - name: "Livolo switch gang 1"
+      - name: "Livolo switch gang 2"
