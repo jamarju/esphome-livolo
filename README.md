@@ -1,6 +1,6 @@
 # ESPHome + Livolo switch integration
 
-Integrates with 2-way (1-gang or 2-gang) Livolo switches via the COM line by simulating being another Livolo switch. Wiring diagram available upon request.
+Integrates ESPHome with 2-way (1-gang or 2-gang) Livolo switches via the COM line by simulating being another Livolo switch. Wiring diagram available upon request.
 
 ## Pre-reqs and base skeleton
 
